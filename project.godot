@@ -1,0 +1,145 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Control",
+"class": "AboutScreen",
+"language": "GDScript",
+"path": "res://scripts/AboutScreen.gd"
+}, {
+"base": "Spawnable",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://scripts/Enemy.gd"
+}, {
+"base": "Button",
+"class": "GameButton",
+"language": "GDScript",
+"path": "res://scripts/MenuButton.gd"
+}, {
+"base": "Control",
+"class": "GameOverScreen",
+"language": "GDScript",
+"path": "res://scripts/GameOverScreen.gd"
+}, {
+"base": "Control",
+"class": "HUD",
+"language": "GDScript",
+"path": "res://scripts/HUD.gd"
+}, {
+"base": "Area2D",
+"class": "Movable",
+"language": "GDScript",
+"path": "res://scripts/Movable.gd"
+}, {
+"base": "Movable",
+"class": "Player",
+"language": "GDScript",
+"path": "res://scripts/Player.gd"
+}, {
+"base": "Spawnable",
+"class": "Powerup",
+"language": "GDScript",
+"path": "res://scripts/Powerup.gd"
+}, {
+"base": "Powerup",
+"class": "Shield",
+"language": "GDScript",
+"path": "res://scripts/Shield.gd"
+}, {
+"base": "Powerup",
+"class": "SlowMotion",
+"language": "GDScript",
+"path": "res://scripts/SlowMotion.gd"
+}, {
+"base": "Movable",
+"class": "Spawnable",
+"language": "GDScript",
+"path": "res://scripts/NPC.gd"
+}, {
+"base": "Tween",
+"class": "Transition",
+"language": "GDScript",
+"path": "res://scripts/Transition.gd"
+} ]
+_global_script_class_icons={
+"AboutScreen": "",
+"Enemy": "",
+"GameButton": "",
+"GameOverScreen": "",
+"HUD": "",
+"Movable": "",
+"Player": "",
+"Powerup": "",
+"Shield": "",
+"SlowMotion": "",
+"Spawnable": "",
+"Transition": ""
+}
+
+[application]
+
+config/name="Dodger"
+run/main_scene="res://menus/MainMenu.tscn"
+boot_splash/image="res://logo/splash.png"
+config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://scripts/Global.gd"
+Screens="*res://scripts/Screens.gd"
+
+[display]
+
+window/size/width=640
+window/size/height=360
+window/size/fullscreen=true
+window/size/test_width=1280
+window/size/test_height=720
+window/vsync/use_vsync=false
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+
+[layer_names]
+
+2d_render/layer_1="Background"
+2d_physics/layer_1="Player"
+2d_render/layer_2="Player"
+2d_physics/layer_2="Enemies"
+2d_render/layer_3="Pickups"
+2d_physics/layer_3="Power-ups"
+2d_render/layer_4="Enemies"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
